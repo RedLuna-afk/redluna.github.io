@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.24.0/dist/css/uikit.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body >
+<main class="page-title">
+    <div class="background">
+        <video autoplay loop muted id = "myVideo">
+            <source src="images/FonGl.mp4" type="video/mp4">
+        </video>
+    </div>
+    <header class="uk-navbar-container" uk-navbar>
+        <a href="index.html">
+            <img class="logo" src="images/logo.png" alt="Логотип" width="200" height="200">
+        </a>
+
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@m">
+                <li><a href="browser.html">БРАУЗЕРЫ</a></li>
+                <li><a href="devtools.html">DEVTOOLS</a></li>
+                <li><a href="expansion.html">РАСШИРЕНИЯ</a></li>
+                <li><a href="HTML.html">HTML</a></li>
+                <li><a href="CSS.html">CSS</a></li>
+                <li><a href="JavaScript.html">JavaScript</a></li>
+                <li><a href="guide.html">Полезные знания / гайды</a></li>
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@m"
+               href="#mobile-menu"
+               uk-navbar-toggle-icon
+               uk-toggle></a>
+        </div>
+    </header>
+
+    <div id="mobile-menu" uk-offcanvas="overlay: true">
+        <div class="uk-offcanvas-bar">
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+            <ul class="uk-nav uk-nav-default">
+                <li><a href="browser.html">БРАУЗЕРЫ</a></li>
+                <li><a href="devtools.html">DEVTOOLS</a></li>
+                <li><a href="expansion.html">РАСШИРЕНИЯ</a></li>
+                <li><a href="HTML.html">HTML</a></li>
+                <li><a href="CSS.html">CSS</a></li>
+                <li><a href="JavaScript.html">JavaScript</a></li>
+                <li><a href="guide.html">ПОЛЕЗНЫЕ ЗНАНИЯ</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="hero">
+        <div class="hero-text">
+            <h1>БРАУЗЕРЫ И DEVTOOLS</h1>
+            <h2>Инструменты современного веб-разработчика </h2>
+            <button class ="uk-button btn" uk-toggle="target: #myModal">
+                НАЧАТЬ ИССЛЕДОВАНИЕ
+            </button>
+        </div>
+    </div>
+    <div id="myModal" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body ">
+
+            <h2>ХОЧЕШЬ БЫТЬ УСПЕШНЫМ?</h2>
+
+            <img src="images/add.jpg"
+                 alt="Расширения браузера"
+                 width="600">
+
+            <p>
+                Тогда перестань ждать подходящего момента.
+                Подходящий момент уже ждёт тебя. И, скорее всего, уже давно.
+            </p>
+            <p>
+                Я прошёл путь от человека, который ничего не понимал, до человека,
+                который ничего не понимает, но теперь делает это уверенно.
+            </p>
+            <p>И сегодня я готов поделиться с тобой своей системой.</p>
+            <h2>🔥КУРС «УСПЕШНЫЙ УСПЕХ 2.0»🔥</h2>
+
+            <p>За 7 дней ты узнаешь:</p>
+            <ul class="uk-list uk-list-decimal">
+                <li>как вставать в 6 утра, даже если ты не собирался</li>
+                <li>как говорить «я в ресурсе», когда ресурса нет</li>
+                <li>как превратить 500 рублей в 500 рублей, но с правильным мышлением</li>
+                <li>как ставить цели, которые ты никогда не достигнешь, зато красиво запишешь в блокнот</li>
+                <li>как выглядеть занятым, даже если весь день ничего не делал</li>
+                <li>и самое главное — как продавать курс успешного успеха другим людям.</li>
+            </ul>
+
+            <h1>💰 Стоимость курса — всего 99 999 рублей</h1>
+
+            <button class="uk-modal-close uk-align-center" type="button">
+                Закрыть
+            </button>
+
+        </div>
+    </div>
+</main>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.24.0/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.24.0/dist/js/uikit-icons.min.js"></script>
+</body>
+
+</html>

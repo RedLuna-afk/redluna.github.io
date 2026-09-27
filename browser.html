@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Браузеры</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.24.0/dist/css/uikit.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body >
+<main class="page">
+    <header class="uk-navbar-container" uk-navbar>
+        <a href="index.html">
+            <img class="logo" src="images/logo.png" alt="Логотип" width="200" height="200">
+        </a>
+
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@m">
+                <li><a href="browser.html">БРАУЗЕРЫ</a></li>
+                <li><a href="devtools.html">DEVTOOLS</a></li>
+                <li><a href="expansion.html">РАСШИРЕНИЯ</a></li>
+                <li><a href="HTML.html">HTML</a></li>
+                <li><a href="CSS.html">CSS</a></li>
+                <li><a href="JavaScript.html">JavaScript</a></li>
+                <li><a href="guide.html">Полезные знания / гайды</a></li>
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@m"
+               href="#mobile-menu"
+               uk-navbar-toggle-icon
+               uk-toggle></a>
+        </div>
+    </header>
+
+    <div id="mobile-menu" uk-offcanvas="overlay: true">
+        <div class="uk-offcanvas-bar">
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+            <ul class="uk-nav uk-nav-default">
+                <li><a href="browser.html">БРАУЗЕРЫ</a></li>
+                <li><a href="devtools.html">DEVTOOLS</a></li>
+                <li><a href="expansion.html">РАСШИРЕНИЯ</a></li>
+                <li><a href="HTML.html">HTML</a></li>
+                <li><a href="CSS.html">CSS</a></li>
+                <li><a href="JavaScript.html">JavaScript</a></li>
+                <li><a href="guide.html">ПОЛЕЗНЫЕ ЗНАНИЯ</a></li>
+            </ul>
+        </div>
+    </div>
+    </div>
+    <div class = "uk-container " >
+        <div class = "uk-child-width-1-4@m" uk-grid>
+            <div>
+                <div class="uk-card uk-card-overlay uk-card-hover browser-card">
+                    <div class = "uk-card-media-top">
+                        <img class="browser-image" src="images/chrome.png" alt="browser" width="600" height="700">
+                    </div>
+                    <div class = "uk-card-body">
+                        <h2>Chrome</h2>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-overlay uk-card-hover browser-card">
+                    <div class = "uk-card-media-top">
+                        <img class="browser-image" src="images/edge.png" alt="browser" width="600" height="700">
+                    </div>
+                    <div class = "uk-card-body">
+                        <h2>Edge</h2>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-overlay uk-card-hover browser-card">
+                    <div class = "uk-card-media-top">
+                        <img class="browser-image" src="images/opera.png" alt="browser" width="600" height="700">
+                    </div>
+                    <div class = "uk-card-body">
+                        <h2>Opera</h2>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-overlay uk-card-hover browser-card">
+                    <div class = "uk-card-media-top">
+                        <img class="browser-image" src="images/fox.png" alt="browser" width="600" height="700">
+                    </div>
+                    <div class = "uk-card-body">
+                        <h2>Fire Fox</h2>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <ul id="inf">
+            <li>
+                <h2>Google Chrome</h2>
+                <p> Google Chrome — один из наиболее распространённых браузеров, используемых при разработке веб-сайтов. Он предоставляет набор инструментов Chrome DevTools для разработки, тестирования и отладки веб-страниц. </p> <p> С помощью DevTools можно просматривать структуру HTML-документа, изменять CSS в реальном времени, выполнять JavaScript и находить ошибки в коде. Также разработчик может анализировать загрузку файлов, сетевые запросы и производительность страницы. </p> <p> Возможности Chrome можно расширять с помощью плагинов и расширений. Они позволяют добавлять инструменты для работы с цветами, HTML, CSS, API, тестированием и другими задачами веб-разработки. </p>
+            </li>
+
+            <li>
+                <h2>Microsoft Edge</h2>
+                <p> Microsoft Edge также широко используется для тестирования веб-сайтов и веб-приложений. В браузере встроены инструменты разработчика Edge DevTools, предназначенные для анализа и отладки веб-страниц. </p> <p> DevTools позволяют изучать HTML и CSS, выполнять JavaScript, просматривать ошибки консоли и анализировать сетевые запросы. Отдельные инструменты предназначены для проверки адаптивности сайта и оценки его производительности. </p> <p> Благодаря совместимости с экосистемой Chromium Edge поддерживает большое количество расширений для веб-разработчиков. С их помощью можно добавлять дополнительные функции для тестирования, отладки и анализа сайтов. </p>
+            </li>
+
+            <li>
+                <h2>Opera</h2>
+                <p> Opera — браузер, который также может использоваться для разработки и тестирования веб-сайтов. В нём доступны инструменты разработчика, позволяющие исследовать содержимое и поведение веб-страницы. </p> <p> С помощью DevTools разработчик может просматривать HTML-элементы, редактировать CSS, выполнять JavaScript и анализировать работу страницы. Также доступны инструменты для просмотра сетевой активности и оценки производительности. </p> <p> Opera поддерживает расширения, которые помогают разработчикам выполнять различные задачи: проверять стили, анализировать страницы, работать с цветами и контролировать отдельные параметры веб-сайта. </p>
+            </li>
+
+            <li>
+                <h2>Mozilla Firefox</h2>
+                <p> Mozilla Firefox предоставляет собственный набор инструментов разработчика — Firefox Developer Tools. Они используются для создания, тестирования и отладки веб-сайтов и веб-приложений. </p> <p> Инструменты позволяют исследовать HTML и CSS, изменять элементы страницы в реальном времени, отлаживать JavaScript и просматривать ошибки. Также разработчик может анализировать сетевые запросы, хранилище браузера и производительность веб-страницы. </p> <p> Firefox поддерживает различные расширения для веб-разработки. Они могут дополнять стандартные инструменты браузера и помогать при проверке кода, анализе интерфейса и тестировании веб-приложений. </p>
+            </li>
+        </ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.24.0/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.24.0/dist/js/uikit-icons.min.js"></script>
+    <script>
+        const cards = document.querySelectorAll('.browser-card');
+        const information = document.querySelectorAll('#inf > li');
+
+        information.forEach(item => {
+            item.style.display = 'none';
+        });
+
+        cards.forEach((card, index) => {
+            card.addEventListener('click', () => {
+
+                information.forEach(item => {
+                    item.style.display = 'none';
+                });
+
+                information[index].style.display = 'block';
+            });
+        });
+    </script>
+</main>
+</body>
+</html>

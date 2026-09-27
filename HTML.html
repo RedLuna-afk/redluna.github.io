@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.24.0/dist/css/uikit.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="page">
+    <header class="uk-navbar-container" uk-navbar>
+        <a href="index.html">
+            <img class="logo" src="images/logo.png" alt="Логотип" width="200" height="200">
+        </a>
+
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@m">
+                <li><a href="browser.html">БРАУЗЕРЫ</a></li>
+                <li><a href="devtools.html">DEVTOOLS</a></li>
+                <li><a href="expansion.html">РАСШИРЕНИЯ</a></li>
+                <li><a href="HTML.html">HTML</a></li>
+                <li><a href="CSS.html">CSS</a></li>
+                <li><a href="JavaScript.html">JavaScript</a></li>
+                <li><a href="guide.html">Полезные знания / гайды</a></li>
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@m"
+               href="#mobile-menu"
+               uk-navbar-toggle-icon
+               uk-toggle></a>
+        </div>
+    </header>
+
+    <div id="mobile-menu" uk-offcanvas="overlay: true">
+        <div class="uk-offcanvas-bar">
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+            <ul class="uk-nav uk-nav-default">
+                <li><a href="browser.html">БРАУЗЕРЫ</a></li>
+                <li><a href="devtools.html">DEVTOOLS</a></li>
+                <li><a href="expansion.html">РАСШИРЕНИЯ</a></li>
+                <li><a href="HTML.html">HTML</a></li>
+                <li><a href="CSS.html">CSS</a></li>
+                <li><a href="JavaScript.html">JavaScript</a></li>
+                <li><a href="guide.html">ПОЛЕЗНЫЕ ЗНАНИЯ</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="uk-grid-small uk-grid-match" uk-grid>
+        <article class="uk-width-expand@m">
+            <h1>HTML — основа веб-страницы</h1>
+
+            <section>
+                <h2>Что такое HTML?</h2>
+                <p>HTML (HyperText Markup Language) — язык гипертекстовой разметки, который используется для создания структуры веб-страниц. С его помощью браузер понимает, какие элементы находятся на странице: заголовки, абзацы, изображения, ссылки, таблицы, формы и другие компоненты.</p>
+                <p>HTML не является языком программирования. Он описывает структуру документа с помощью специальных элементов — тегов. Внешний вид элементов обычно задаётся с помощью CSS, а интерактивное поведение может реализовываться с помощью JavaScript.</p>
+                <p>HTML является основой практически любой веб-страницы. Даже сложные современные сайты используют HTML для описания содержимого и его структуры.</p>
+            </section>
+
+            <section id="1">
+                <h2>Структура HTML-документа</h2>
+                <p>Обычный HTML-документ имеет несколько основных частей. В начале располагается <code><span class="code-keyword">&lt;DOCTYPE</span> html<span class="code-keyword">&gt</span></code>, который сообщает браузеру, какую версию стандарта HTML следует использовать.</p>
+                <h4>Пример минимальной структуры:</h4>
+                <pre><span class="code-keyword">&lt;DOCTYPE</span> html<span class="code-keyword">&gt;</span>
+<span class="code-keyword">&lt;html</span> lang=<span class="code-string">"ru"</span><span class="code-keyword">&gt;</span>
+<span class="code-keyword">&lt;head&gt;</span>
+    <span class="code-keyword">&lt;meta</span> charset=<span class="code-string">"utf-8"</span><span class="code-keyword">&gt;</span>
+    <span class="code-keyword">&lt;title&gt;</span>Моя страница<span class="code-keyword">&lt;/title&gt;</span>
+<span class="code-keyword">&lt;/head&gt;</span>
+
+<span class="code-keyword">&lt;body&gt;</span>
+    <span class="code-keyword">&lt;h1&gt;</span>Заголовок старницы<span class="code-keyword">&lt;/h1&gt;</span>
+    <span class="code-keyword">&lt;p&gt;</span>Содержание старницы<span class="code-keyword">&lt;/p&gt;</span>
+<span class="code-keyword">&lt;/body&gt;</span>
+<span class="code-keyword">&lt;/html&gt;</span></pre>
+                <p>Элемент <code><span class="code-keyword">&lt;html&gt;</span></code> является корневым элементом документа. Внутри него находятся <code><span class="code-keyword">&lt;head&gt;</span></code> и <code><span class="code-keyword">&lt;body&gt;</span></code></p>
+                <p>В <code><span class="code-keyword">&lt;head&gt;</span></code> размещается служебная информация: название страницы, кодировка, подключение CSS, метаданные и другие настройки.</p>
+                <p>В <code><span class="code-keyword">&lt;body&gt;</span></code> находится непосредственно содержимое страницы, которое отображается пользователю.</p>
+            </section>
+
+
+            <section id="2">
+                <h2>Основные категории HTML-элементов</h2>
+                <p>HTML содержит большое количество элементов, предназначенных для разных задач.</p>
+                <table class="uk-table uk-table-divider">
+                    <caption></caption>
+                    <thead>
+                    <tr>
+                        <th><b>Категория</b></th>
+                        <th><b>Примеры</b></th>
+                        <th><b>Назначение</b></th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    <tr>
+                        <td>Заголовки</td>
+                        <td><code><span class="code-keyword">&lt;h1&gt;</span></code> - <code><span class="code-keyword">&lt;h6&gt;</span></td>
+                        <td>Создание заголовков разных уровней</td>
+                    </tr>
+                    <tr>
+                        <td>Текст</td>
+                        <td><code><span class="code-keyword">&lt;p&gt;</span></code>,<code><span class="code-keyword">&lt;span&gt;</span></code></td>
+                        <td>Работа с текстовым содержимым</td>
+                    </tr>
+                    <tr>
+                        <td>Ссылки</td>
+                        <td><code><span class="code-keyword">&lt;a&gt;</span></code></td>
+                        <td>Переход на другие страницы или разделы</td>
+                    </tr>
+                    <tr>
+                        <td>Изображения</td>
+                        <td><code><span class="code-keyword">&lt;img&gt;</span></code></td>
+                        <td>Добавление изображений</td>
+                    </tr>
+                    <tr>
+                        <td>Списки</td>
+                        <td><code><span class="code-keyword">&lt;ul&gt;</span></code>,<code><span class="code-keyword">&lt;ol&gt;</span></code>,<code><span class="code-keyword">&lt;li&gt;</span></code></td>
+                        <td>Представление перечислений</td>
+                    </tr>
+                    <tr>
+                        <td>Таблицы</td>
+                        <td><code><span class="code-keyword">&lt;table&gt;</span></code>,<code><span class="code-keyword">&lt;tr&gt;</span></code>,<code><span class="code-keyword">&lt;td&gt;</span></code></td>
+                        <td>Представление табличных данных</td>
+                    </tr>
+                    <tr>
+                        <td>Формы</td>
+                        <td><code><span class="code-keyword">&lt;form&gt;</span></code>,<code><span class="code-keyword">&lt;input&gt;</span></code>,<code><span class="code-keyword">&lt;button&gt;</span></code></td>
+                        <td>Получение данных от пользователя</td>
+                    </tr>
+                    <tr>
+                        <td>Секции</td>
+                        <td><code><span class="code-keyword">&lt;section&gt;</span></code>,<code><span class="code-keyword">&lt;article&gt;</span></code></td>
+                        <td>Логическое разделение содержимого</td>
+                    </tr>
+                    <tr>
+                        <td>Семантические элементы</td>
+                        <td><code><span class="code-keyword">&lt;header&gt;</span></code>,<code><span class="code-keyword">&lt;main&gt;</span></code>,<code><span class="code-keyword">&lt;aside&gt;</span></code></span></code>,<code><span class="code-keyword">&lt;footer&gt;</span></code></td>
+                        <td>Работа с текстовым содержимым</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section id="3">
+                <h2>Заголовки и текст</h2>
+                <p>Для создания заголовков используются элементы от <code><span class="code-keyword">&lt;h1&gt;</span></code> до <code><span class="code-keyword">&lt;h6&gt;</span></code>. <code><span class="code-keyword">&lt;h1&gt;</span></code> обычно используется для основного заголовка страницы, а последующие уровни позволяют создавать вложенную структуру.</p>
+                <h4>Например:</h4>
+                <pre><span class="code-keyword">&lt;h1&gt;</span>HTML<span class="code-keyword">&lt;/h1&gt;</span>
+<span class="code-keyword">&lt;h2&gt;</span>Структура документа<span class="code-keyword">&lt;/h2&gt;</span>
+<span class="code-keyword">&lt;h3&gt;</span>Элемент head<span class="code-keyword">&lt;/h3&gt;</span></pre>
+            <h4>Обычный текст размещается внутри элемента <code><span class="code-keyword">&lt;p&gt;</span></code>:</h4>
+            <pre><span class="code-keyword">&lt;p&gt;</span>
+    HTML используется для создания структуры веб-страницы.
+<code><span class="code-keyword">&lt;/p&gt;</span></code></pre>
+            <p>Использование заголовков в правильном порядке помогает пользователю ориентироваться в содержимом страницы и делает структуру документа более понятной.</p>
+            </section >
+
+            <section id ="4">
+                <h2>Ссылки</h2>
+                <p>Для создания гиперссылок используется элемент <code><span class="code-keyword">&lt;a&gt;</span></code>. Адрес страницы указывается с помощью атрибута <code>href</code>.</p>
+                <h4>Например</h4>
+                <pre><code><span class="code-keyword">&lt;a</span> href=<span class="code-string">"devtools.html"</span><span class="code-keyword">&gt;</span>Перейти к странице DevTools<span class="code-keyword">&lt;/a&gt;</span></code></pre>
+                <p>Ссылки могут использоваться для перехода между страницами сайта, открытия внешних ресурсов или перемещения к определённому разделу текущей страницы.</p>
+                <h4>Например, ссылка на раздел страницы может выглядеть следующим образом:</h4>
+                <pre><code><span class="code-keyword">&lt;a</span> href=<span class="code-string">"#forms"</span><span class="code-keyword">&gt;</span>Перейти к формам<span class="code-keyword">&lt;/a&gt;</span></code></pre>
+                <p>В этом случае браузер перейдёт к элементу, у которого установлен соответствующий <code>id</code>.</p>
+            </section>
+
+            <section id ="5">
+                <h2>Изображения</h2>
+                <p>Для добавления изображения используется элемент <code><span class="code-keyword">&lt;img&gt;</span></code>. Основной источник изображения указывается в атрибуте <code>src</code>.</p>
+                <h4>Например:</h4>
+                <pre><code><span class="code-keyword">&lt;img</span> src=<span class="code-string">"images/logo.png"</span> alt=<span class="code-string">"Логотип сайта"</span><span class="code-keyword">&gt;</span></code></pre>
+                <p>Атрибут <code>alt</code> содержит текстовое описание изображения. Он полезен в ситуациях, когда изображение невозможно загрузить, а также используется вспомогательными технологиями.</p>
+                <p>При разработке сайта изображения желательно оптимизировать по размеру и использовать подходящий формат.</p>
+            </section>
+
+            <section id="6">
+                <h2>Списки</h2>
+                <p>HTML позволяет создавать два основных типа списков.</p>
+                <h4>Маркированный список создаётся с помощью <code><span class="code-keyword">&lt;ul&gt;</span></code>:</h4>
+                <pre><code><span class="code-keyword">&lt;ul&gt;</span></code>
+    <span class="code-keyword">&lt;li&gt;</span>HTML<span class="code-keyword">&lt;/li&gt;</span>
+    <span class="code-keyword">&lt;li&gt;</span>CSS<span class="code-keyword">&lt;/li&gt;</span>
+    <span class="code-keyword">&lt;li&gt;</span>JavaScript<span class="code-keyword">&lt;/li&gt;</span>
+<span class="code-keyword">&lt;/ul&gt;</span></pre>
+
+            </section>
+            <section id="7">
+                <h2>Таблицы</h2>
+
+                <p>
+                    Таблицы используются в HTML для представления структурированных данных,
+                    которые удобно сравнивать по строкам и столбцам. Например, с помощью
+                    таблицы можно представить характеристики браузеров, расписание,
+                    список технологий или результаты измерений.
+                </p>
+
+                <p>
+                    Основным элементом является <code><span class="code-keyword">&lt;table&gt;</span></code>.
+                    Строки таблицы создаются с помощью
+                    <code><span class="code-keyword">&lt;tr&gt;</span></code>, а ячейки —
+                    с помощью <code><span class="code-keyword">&lt;td&gt;</span></code>.
+                    Для заголовков используются элементы
+                    <code><span class="code-keyword">&lt;th&gt;</span></code>.
+                </p>
+
+                <h4>Пример таблицы:</h4>
+
+                <pre><code><span class="code-keyword">&lt;table&gt;</span>
+    <span class="code-keyword">&lt;tr&gt;</span>
+        <span class="code-keyword">&lt;th&gt;</span>Технология<span class="code-keyword">&lt;/th&gt;</span>
+        <span class="code-keyword">&lt;th&gt;</span>Назначение<span class="code-keyword">&lt;/th&gt;</span>
+    <span class="code-keyword">&lt;/tr&gt;</span>
+    <span class="code-keyword">&lt;tr&gt;</span>
+        <span class="code-keyword">&lt;td&gt;</span>HTML<span class="code-keyword">&lt;/td&gt;</span>
+        <span class="code-keyword">&lt;td&gt;</span>Структура<span class="code-keyword">&lt;/td&gt;</span>
+    <span class="code-keyword">&lt;/tr&gt;</span>
+<span class="code-keyword">&lt;/table&gt;</span></code></pre>
+
+                <p>
+                    Для более сложных таблиц можно использовать
+                    <code><span class="code-keyword">&lt;thead&gt;</span></code>,
+                    <code><span class="code-keyword">&lt;tbody&gt;</span></code> и
+                    <code><span class="code-keyword">&lt;tfoot&gt;</span></code>.
+                    Такое разделение делает структуру таблицы более понятной.
+                </p>
+            </section>
+
+            <section id="8">
+                <h2>Формы и ввод данных</h2>
+
+                <p>
+                    Формы используются для получения информации от пользователя.
+                    Они встречаются практически на любом современном сайте: при регистрации,
+                    авторизации, поиске, отправке сообщений и заполнении различных анкет.
+                </p>
+
+                <p>
+                    Основным элементом формы является
+                    <code><span class="code-keyword">&lt;form&gt;</span></code>.
+                    Внутри формы могут находиться поля
+                    <code><span class="code-keyword">&lt;input&gt;</span></code>,
+                    многострочные поля
+                    <code><span class="code-keyword">&lt;textarea&gt;</span></code>,
+                    списки выбора
+                    <code><span class="code-keyword">&lt;select&gt;</span></code>
+                    и кнопки.
+                </p>
+
+                <h4>Пример простой формы:</h4>
+
+                <pre><code><span class="code-keyword">&lt;form&gt;</span>
+    <span class="code-keyword">&lt;label</span> for=<span class="code-string">"name"</span><span class="code-keyword">&gt;</span>
+        Ваше имя:
+    <span class="code-keyword">&lt;/label&gt;</span>
+
+    <span class="code-keyword">&lt;input</span>
+        type=<span class="code-string">"text"</span>
+        id=<span class="code-string">"name"</span>
+        name=<span class="code-string">"name"</span>
+    <span class="code-keyword">&gt;</span>
+
+    <span class="code-keyword">&lt;button</span> type=<span class="code-string">"submit"</span><span class="code-keyword">&gt;</span>
+        Отправить
+    <span class="code-keyword">&lt;/button&gt;</span>
+<span class="code-keyword">&lt;/form&gt;</span></code></pre>
+
+                <p>
+                    Подписи <code><span class="code-keyword">&lt;label&gt;</span></code>
+                    помогают пользователю понять назначение поля. Атрибуты
+                    <code>id</code> и <code>for</code> позволяют связать подпись
+                    с соответствующим элементом формы.
+                </p>
+            </section>
+            <section id="9">
+                <h2>Семантическая разметка</h2>
+
+                <p>
+                    Семантические элементы HTML позволяют описывать назначение различных
+                    частей страницы. Благодаря этому структура документа становится более
+                    понятной как разработчику, так и браузеру.
+                </p>
+
+                <table class="uk-table uk-table-divider">
+                    <thead>
+                    <tr>
+                        <th>Элемент</th>
+                        <th>Назначение</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    <tr>
+                        <td><code><span class="code-keyword">&lt;header&gt;</span></code></td>
+                        <td>Верхняя часть страницы или раздела</td>
+                    </tr>
+
+                    <tr>
+                        <td><code><span class="code-keyword">&lt;nav&gt;</span></code></td>
+                        <td>Навигационные ссылки</td>
+                    </tr>
+
+                    <tr>
+                        <td><code><span class="code-keyword">&lt;main&gt;</span></code></td>
+                        <td>Основное содержимое страницы</td>
+                    </tr>
+
+                    <tr>
+                        <td><code><span class="code-keyword">&lt;section&gt;</span></code></td>
+                        <td>Тематический раздел</td>
+                    </tr>
+
+                    <tr>
+                        <td><code><span class="code-keyword">&lt;article&gt;</span></code></td>
+                        <td>Самостоятельный материал</td>
+                    </tr>
+
+                    <tr>
+                        <td><code><span class="code-keyword">&lt;aside&gt;</span></code></td>
+                        <td>Дополнительная информация</td>
+                    </tr>
+
+                    <tr>
+                        <td><code><span class="code-keyword">&lt;footer&gt;</span></code></td>
+                        <td>Нижняя часть страницы</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <p>
+                    Использование семантических элементов особенно важно при создании
+                    больших сайтов, поскольку они позволяют разделить страницу на
+                    логические области.
+                </p>
+            </section>
+            <section id="10">
+                <h2>HTML, CSS и JavaScript</h2>
+
+                <p>
+                    Современные веб-сайты обычно создаются с использованием сразу
+                    нескольких технологий. HTML отвечает за структуру документа,
+                    CSS — за внешний вид, а JavaScript — за интерактивность и поведение
+                    элементов.
+                </p>
+
+                <table class="uk-table uk-table-divider">
+                    <thead>
+                    <tr>
+                        <th>Технология</th>
+                        <th>Основная задача</th>
+                        <th>Пример</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    <tr>
+                        <td>HTML</td>
+                        <td>Структура страницы</td>
+                        <td>Заголовки, текст, изображения</td>
+                    </tr>
+
+                    <tr>
+                        <td>CSS</td>
+                        <td>Оформление</td>
+                        <td>Цвет, размеры, расположение</td>
+                    </tr>
+
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>Интерактивность</td>
+                        <td>Кнопки, меню, динамические элементы</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <p>
+                    Например, HTML может создать кнопку, CSS может изменить её внешний вид,
+                    а JavaScript может определить действие, которое произойдёт после
+                    нажатия на неё.
+                </p>
+
+                <pre><code><span class="code-keyword">&lt;button</span> id=<span class="code-string">"button"</span><span class="code-keyword">&gt;</span>
+    Нажать
+<span class="code-keyword">&lt;/button&gt;</span></code></pre>
+            </section>
+            <section id="11">
+                <h2>Частые ошибки при работе с HTML</h2>
+
+                <p>
+                    При создании HTML-документов начинающие разработчики часто сталкиваются
+                    с похожими ошибками. Большинство из них связано с неправильной
+                    структурой документа или некорректным использованием элементов.
+                </p>
+
+                <ol>
+                    <li>Неправильная вложенность HTML-элементов.</li>
+                    <li>Отсутствие обязательных атрибутов у некоторых элементов.</li>
+                    <li>Использование заголовков без логической структуры.</li>
+                    <li>Отсутствие атрибута <code>alt</code> у важных изображений.</li>
+                    <li>Использование таблиц для построения макета страницы.</li>
+                    <li>Дублирование одинаковых элементов без необходимости.</li>
+                    <li>Смешивание структуры HTML с большим количеством CSS-стилей.</li>
+                </ol>
+
+                <p>
+                    Для поиска ошибок HTML-код можно проверять с помощью специальных
+                    валидаторов. Это позволяет обнаружить проблемы ещё до публикации
+                    страницы.
+                </p>
+            </section>
+            <section id="12">
+                <h2>Итог</h2>
+
+                <p>
+                    HTML является фундаментальной технологией веб-разработки. С его помощью
+                    создаётся структура веб-страницы, размещается текст, изображения,
+                    ссылки, таблицы, формы и другие элементы.
+                </p>
+
+                <p>
+                    При разработке важно не просто добиться отображения страницы в браузере,
+                    но и создать логичную и семантическую структуру. Использование
+                    подходящих HTML-элементов делает код более понятным и удобным
+                    для дальнейшей поддержки.
+                </p>
+
+                <p>
+                    HTML тесно связан с CSS и JavaScript. Вместе эти технологии позволяют
+                    создавать полноценные современные веб-приложения.
+                </p>
+            </section>
+        </article>
+        <div>
+            <aside class="sidebar">
+                <h2>Быстрая навигация</h2>
+
+                <ul class="uk-list uk-list-collapse">
+                    <li><a href="#1">Структура HTML-документа</a></li>
+                    <li><a href="#2">Основные категории элементов</a></li>
+                    <li><a href="#3">Заголовки и текст</a></li>
+                    <li><a href="#4">Ссылки</a></li>
+                    <li><a href="#5">Изображения</a></li>
+                    <li><a href="#6">Списки</a></li>
+                    <li><a href="#7">Таблицы</a></li>
+                    <li><a href="#8">Формы</a></li>
+                    <li><a href="#9">Семантическая разметка</a></li>
+                    <li><a href="#10">HTML, CSS и JavaScript</a></li>
+                    <li><a href="#11">Частые ошибки</a></li>
+                    <li><a href="#12">Итог</a></li>
+                </ul>
+
+                <h2>Основные элементы</h2>
+
+                <ul>
+                    <li><code>&lt;h1&gt;</code> — заголовок</li>
+                    <li><code>&lt;p&gt;</code> — абзац</li>
+                    <li><code>&lt;a&gt;</code> — ссылка</li>
+                    <li><code>&lt;img&gt;</code> — изображение</li>
+                    <li><code>&lt;ul&gt;</code> — список</li>
+                    <li><code>&lt;table&gt;</code> — таблица</li>
+                </ul>
+
+
+            </aside>
+        </div>
+    </div>
+
+</main>
+
+<footer >
+    <p>OOO "Тмыв денег"</p>
+    <p>Лучший сайт в мире разработал Чупров Сергей</p>
+
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.24.0/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.24.0/dist/js/uikit-icons.min.js"></script>
+</body>
+</html>

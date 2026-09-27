@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript — Браузеры и DevTools</title>
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/uikit@3.24.0/dist/css/uikit.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<main class="page">
+
+    <header class="uk-navbar-container" uk-navbar>
+
+        <a href="index.html">
+            <img class="logo"
+                 src="images/logo.png"
+                 alt="Логотип"
+                 width="200"
+                 height="200">
+        </a>
+
+        <div class="uk-navbar-right">
+
+            <ul class="uk-navbar-nav uk-visible@m">
+                <li><a href="browser.html">БРАУЗЕРЫ</a></li>
+                <li><a href="devtools.html">DEVTOOLS</a></li>
+                <li><a href="expansion.html">РАСШИРЕНИЯ</a></li>
+                <li><a href="HTML.html">HTML</a></li>
+                <li><a href="CSS.html">CSS</a></li>
+                <li><a href="JavaScript.html">JavaScript</a></li>
+                <li><a href="guide.html">Полезные знания / гайды</a></li>
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@m"
+               href="#mobile-menu"
+               uk-navbar-toggle-icon
+               uk-toggle>
+            </a>
+
+        </div>
+    </header>
+
+    <div id="mobile-menu" uk-offcanvas="overlay: true; flip: true">
+
+        <div class="uk-offcanvas-bar">
+
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+            <ul class="uk-nav uk-nav-default">
+
+                <li><a href="browser.html">БРАУЗЕРЫ</a></li>
+                <li><a href="devtools.html">DEVTOOLS</a></li>
+                <li><a href="expansion.html">РАСШИРЕНИЯ</a></li>
+                <li><a href="HTML.html">HTML</a></li>
+                <li><a href="CSS.html">CSS</a></li>
+                <li><a href="JavaScript.html">JavaScript</a></li>
+                <li><a href="guide.html">ПОЛЕЗНЫЕ ЗНАНИЯ</a></li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <div class="uk-grid-small uk-grid-match" uk-grid>
+
+        <article class="uk-width-expand">
+
+            <h1>JavaScript</h1>
+
+            <section id="1">
+
+                <h2>Что такое JavaScript?</h2>
+
+                <p>
+                    JavaScript — язык программирования, который используется
+                    для создания интерактивных и динамических веб-страниц.
+                    Если HTML отвечает за структуру документа, а CSS — за его
+                    внешний вид, то JavaScript позволяет странице реагировать
+                    на действия пользователя.
+                </p>
+
+                <p>
+                    С помощью JavaScript можно обрабатывать нажатия кнопок,
+                    изменять содержимое страницы, выполнять вычисления,
+                    создавать анимации, проверять формы и взаимодействовать
+                    с сервером.
+                </p>
+
+                <p>
+                    JavaScript выполняется непосредственно в браузере,
+                    поэтому многие действия могут происходить без полной
+                    перезагрузки страницы.
+                </p>
+
+                <h4>Простейший пример:</h4>
+
+                <pre class="js-code"><code><span class="js-builtin">console</span>.<span class="js-method">log</span>(<span class="js-string">"Hello, JavaScript!"</span>);</code></pre>
+
+            </section>
+
+            <section id="2">
+
+                <h2>Подключение JavaScript</h2>
+
+                <p>
+                    JavaScript можно добавить непосредственно в HTML-документ
+                    или подключить из отдельного файла. Для больших проектов
+                    обычно используется отдельный файл с расширением
+                    <code>.js</code>.
+                </p>
+
+                <h4>Внутренний JavaScript:</h4>
+
+                <pre class="js-code"><code><span class="js-punct">&lt;script&gt;</span><span class="js-builtin">console</span>.<span class="js-method">log</span>(<span class="js-string">"Привет!"</span>);<span class="js-punct">&lt;/script&gt;</span></code></pre>
+
+                <h4>Внешний файл:</h4>
+
+                <pre class="js-code"><code><span class="js-punct">&lt;script</span> <span class="js-method">src</span>=<span class="js-string">"script.js"</span><span class="js-punct">&gt;&lt;/script&gt;</span></code></pre>
+
+                <p>
+                    При подключении внешнего файла код JavaScript хранится
+                    отдельно от HTML-разметки. Это позволяет сделать проект
+                    более организованным.
+                </p>
+
+            </section>
+
+
+            <section id="3">
+
+                <h2>Переменные</h2>
+
+                <p>
+                    Переменные используются для хранения данных, которые
+                    программа может использовать во время выполнения.
+                    В современном JavaScript для объявления переменных
+                    используются ключевые слова <code>let</code> и
+                    <code>const</code>.
+                </p>
+
+                <table class="uk-table uk-table-divider">
+
+                    <thead>
+                    <tr>
+                        <th>Ключевое слово</th>
+                        <th>Назначение</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+
+                    <tr>
+                        <td>let</td>
+                        <td>Переменная, значение которой можно изменить</td>
+                    </tr>
+
+                    <tr>
+                        <td>const</td>
+                        <td>Константа, которую нельзя переназначить</td>
+                    </tr>
+
+                    <tr>
+                        <td>var</td>
+                        <td>Старый способ объявления переменных</td>
+                    </tr>
+
+                    </tbody>
+
+                </table>
+
+                <h4>Пример:</h4>
+
+                <pre class="js-code"><code><span class="js-keyword">let</span> age <span class="js-operator">=</span> <span class="js-number">21</span>;
+<span class="js-keyword">const</span> name <span class="js-operator">=</span> <span class="js-string">"Сергей"</span>;</code></pre>
+
+            </section>
+
+            <section id="4">
+
+                <h2>Типы данных</h2>
+
+                <p>
+                    JavaScript поддерживает различные типы данных. Они позволяют
+                    хранить числа, строки, логические значения и более сложные
+                    структуры.
+                </p>
+
+                <table class="uk-table uk-table-divider">
+
+                    <thead>
+                    <tr>
+                        <th>Тип</th>
+                        <th>Описание</th>
+                        <th>Пример</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+
+                    <tr>
+                        <td>String</td>
+                        <td>Текст</td>
+                        <td>"Hello"</td>
+                    </tr>
+
+                    <tr>
+                        <td>Number</td>
+                        <td>Число</td>
+                        <td>42</td>
+                    </tr>
+
+                    <tr>
+                        <td>Boolean</td>
+                        <td>Логическое значение</td>
+                        <td>true / false</td>
+                    </tr>
+
+                    <tr>
+                        <td>Array</td>
+                        <td>Массив значений</td>
+                        <td>[1, 2, 3]</td>
+                    </tr>
+
+                    <tr>
+                        <td>Object</td>
+                        <td>Объект с набором свойств</td>
+                        <td>{name: "Alex"}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Null</td>
+                        <td>Отсутствие значения</td>
+                        <td>null</td>
+                    </tr>
+
+                    </tbody>
+
+                </table>
+
+                <h4>Пример:</h4>
+
+                <pre class="js-code"><code><span class="js-keyword">let</span> name <span class="js-operator">=</span> <span class="js-string">"Alex"</span>;
+<span class="js-keyword">let</span> age <span class="js-operator">=</span> <span class="js-number">25</span>;
+<span class="js-keyword">let</span> online <span class="js-operator">=</span> <span class="js-keyword">true</span>;</code></pre>
+
+            </section>
+
+
+            <section id="5">
+
+                <h2>Операторы</h2>
+
+                <p>
+                    Операторы используются для выполнения различных действий
+                    над значениями. С их помощью можно выполнять математические
+                    операции, сравнивать значения и строить логические условия.
+                </p>
+
+                <table class="uk-table uk-table-divider">
+
+                    <thead>
+                    <tr>
+                        <th>Оператор</th>
+                        <th>Назначение</th>
+                        <th>Пример</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+
+                    <tr>
+                        <td>+</td>
+                        <td>Сложение</td>
+                        <td>5 + 2</td>
+                    </tr>
+
+                    <tr>
+                        <td>-</td>
+                        <td>Вычитание</td>
+                        <td>5 - 2</td>
+                    </tr>
+
+                    <tr>
+                        <td>*</td>
+                        <td>Умножение</td>
+                        <td>5 * 2</td>
+                    </tr>
+
+                    <tr>
+                        <td>/</td>
+                        <td>Деление</td>
+                        <td>5 / 2</td>
+                    </tr>
+
+                    <tr>
+                        <td>===</td>
+                        <td>Строгое сравнение</td>
+                        <td>5 === 5</td>
+                    </tr>
+
+                    <tr>
+                        <td>&&</td>
+                        <td>Логическое И</td>
+                        <td>a && b</td>
+                    </tr>
+
+                    <tr>
+                        <td>||</td>
+                        <td>Логическое ИЛИ</td>
+                        <td>a || b</td>
+                    </tr>
+
+                    </tbody>
+
+                </table>
+
+            </section>
+
+
+            <section id="6">
+
+                <h2>Условные конструкции</h2>
+
+                <p>
+                    Условные конструкции позволяют программе выбирать
+                    различные действия в зависимости от определённого условия.
+                    Наиболее распространённой конструкцией является
+                    <code>if...else</code>.
+                </p>
+
+                <pre class="js-code"><code><span class="js-keyword">let</span> age <span class="js-operator">=</span> <span class="js-number">18</span>;
+<span class="js-keyword">if</span> (age <span class="js-operator">&gt;=</span> <span class="js-number">18</span>) {
+    <span class="js-builtin">console</span>.<span class="js-method">log</span>(<span class="js-string">"Доступ разрешён"</span>);
+} <span class="js-keyword">else</span> {
+    <span class="js-builtin">console</span>.<span class="js-method">log</span>(<span class="js-string">"Доступ запрещён"</span>);
+}</code></pre>
+
+                <p>
+                    Такие конструкции позволяют создавать разные сценарии
+                    поведения программы в зависимости от введённых данных
+                    или состояния элементов страницы.
+                </p>
+
+            </section>
+
+
+            <section id="7">
+
+                <h2>Циклы</h2>
+
+                <p>
+                    Циклы используются для многократного выполнения одного
+                    и того же участка программы. Они особенно полезны при
+                    работе с массивами и большими наборами данных.
+                </p>
+
+                <h4>Цикл for:</h4>
+
+                <pre class="js-code"><code><span class="js-keyword">for</span> (<span class="js-keyword">let</span> i <span class="js-operator">=</span> <span class="js-number">0</span>; i <span class="js-operator">&lt;</span> <span class="js-number">5</span>; i<span class="js-operator">++</span>) {
+    <span class="js-builtin">console</span>.<span class="js-method">log</span>(i);
+}</code></pre>
+
+                <p>
+                    В результате цикл выполнит тело программы несколько раз,
+                    изменяя значение переменной счётчика.
+                </p>
+
+            </section>
+
+
+            <section id="8">
+
+                <h2>Функции</h2>
+
+                <p>
+                    Функция представляет собой отдельный блок кода, который
+                    можно вызвать в нужный момент. Функции позволяют не
+                    повторять одинаковый код и разбивать программу на
+                    логические части.
+                </p>
+
+                <pre class="js-code"><code><span class="js-keyword">function</span> <span class="js-method">greet</span>(name) {
+    <span class="js-keyword">return</span> <span class="js-string">"Привет, "</span> <span class="js-operator">+</span> name;
+}
+
+<span class="js-builtin">console</span>.<span class="js-method">log</span>(<span class="js-method">greet</span>(<span class="js-string">"Сергей"</span>));</code></pre>
+
+                <p>
+                    Функция может принимать параметры и возвращать результат
+                    с помощью ключевого слова <code>return</code>.
+                </p>
+
+            </section>
+
+
+            <section id="9">
+
+                <h2>Массивы</h2>
+
+                <p>
+                    Массив используется для хранения нескольких значений
+                    в одной структуре. Каждый элемент массива имеет свой
+                    индекс, начиная с нуля.
+                </p>
+
+                <pre class="js-code"><code><span class="js-keyword">const</span> browsers <span class="js-operator">=</span> [
+    <span class="js-string">"Chrome"</span>,
+    <span class="js-string">"Firefox"</span>,
+    <span class="js-string">"Edge"</span>
+];
+
+<span class="js-builtin">console</span>.<span class="js-method">log</span>(browsers[<span class="js-number">0</span>]);</code></pre>
+
+                <p>
+                    В данном примере обращение к элементу с индексом
+                    <code>0</code> вернёт первый элемент массива.
+                </p>
+
+            </section>
+
+
+            <section id="10">
+
+                <h2>Объекты</h2>
+
+                <p>
+                    Объекты позволяют объединять связанные данные и свойства
+                    в одну структуру. Они широко используются при разработке
+                    веб-приложений.
+                </p>
+
+                <pre class="js-code"><code><span class="js-keyword">const</span> user <span class="js-operator">=</span> {
+    name: <span class="js-string">"Alex"</span>,
+    age: <span class="js-number">21</span>,
+    online: <span class="js-keyword">true</span>
+};
+
+<span class="js-builtin">console</span>.<span class="js-method">log</span>(user.name);</code></pre>
+
+                <p>
+                    Свойства объекта можно получать и изменять во время
+                    выполнения программы.
+                </p>
+
+            </section>
+
+
+            <section id="11">
+
+                <h2>DOM и взаимодействие со страницей</h2>
+
+                <p>
+                    DOM (Document Object Model) представляет HTML-документ
+                    в виде структуры объектов. JavaScript может обращаться
+                    к этим объектам и изменять содержимое страницы.
+                </p>
+
+                <p>
+                    Например, элемент можно найти по его идентификатору
+                    с помощью метода <code>getElementById()</code>.
+                </p>
+
+                <pre class="js-code"><code><span class="js-keyword">const</span> title <span class="js-operator">=</span> <span class="js-builtin">document</span>.<span class="js-method">getElementById</span>(<span class="js-string">"title"</span>);
+
+title.textContent <span class="js-operator">=</span> <span class="js-string">"Новый заголовок"</span>;</code></pre>
+
+                <p>
+                    Таким способом JavaScript может изменять текст,
+                    классы, атрибуты и другие свойства HTML-элементов.
+                </p>
+
+            </section>
+
+
+            <section id="12">
+
+                <h2>События</h2>
+
+                <p>
+                    События позволяют программе реагировать на действия
+                    пользователя. Например, можно обработать нажатие кнопки,
+                    движение мыши или ввод текста.
+                </p>
+
+                <h4>Пример обработки нажатия:</h4>
+
+                <pre class="js-code"><code><span class="js-keyword">const</span> button <span class="js-operator">=</span> <span class="js-builtin">document</span>.<span class="js-method">getElementById</span>(<span class="js-string">"button"</span>);
+
+button.<span class="js-method">addEventListener</span>(<span class="js-string">"click"</span>, <span class="js-keyword">function</span>() {
+    <span class="js-builtin">alert</span>(<span class="js-string">"Кнопка нажата!"</span>);
+});</code></pre>
+
+                <p>
+                    Обработчики событий являются одной из основных возможностей
+                    JavaScript при создании интерактивных веб-страниц.
+                </p>
+
+            </section>
+
+
+            <section id="13">
+
+                <h2>Асинхронный JavaScript</h2>
+
+                <p>
+                    JavaScript также позволяет выполнять операции, которые
+                    занимают некоторое время, не блокируя работу интерфейса.
+                    Это особенно важно при работе с сервером и сетевыми
+                    запросами.
+                </p>
+
+                <p>
+                    Для работы с асинхронным кодом используются такие
+                    инструменты, как Promise, async и await.
+                </p>
+
+                <pre class="js-code"><code><span class="js-keyword">async function</span> <span class="js-method">loadData</span>() {
+    <span class="js-keyword">const</span> response <span class="js-operator">=</span> <span class="js-keyword">await</span> <span class="js-builtin">fetch</span>(<span class="js-string">"data.json"</span>);
+    <span class="js-keyword">const</span> data <span class="js-operator">=</span> <span class="js-keyword">await</span> response.<span class="js-method">json</span>();
+    <span class="js-builtin">console</span>.<span class="js-method">log</span>(data);
+}</code></pre>
+
+            </section>
+
+
+            <section id="14">
+
+                <h2>JavaScript и браузер</h2>
+
+                <p>
+                    Браузер предоставляет JavaScript специальные возможности
+                    для взаимодействия с веб-страницей и окружающей средой.
+                    С помощью встроенных API можно работать с DOM,
+                    хранилищем данных, сетевыми запросами и другими
+                    возможностями браузера.
+                </p>
+
+                <table class="uk-table uk-table-divider">
+
+                    <thead>
+                    <tr>
+                        <th>Возможность</th>
+                        <th>Назначение</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+
+                    <tr>
+                        <td>DOM</td>
+                        <td>Работа с HTML-документом</td>
+                    </tr>
+
+                    <tr>
+                        <td>Fetch API</td>
+                        <td>Выполнение сетевых запросов</td>
+                    </tr>
+
+                    <tr>
+                        <td>Local Storage</td>
+                        <td>Хранение данных в браузере</td>
+                    </tr>
+
+                    <tr>
+                        <td>Console</td>
+                        <td>Вывод сообщений и отладка</td>
+                    </tr>
+
+                    </tbody>
+
+                </table>
+
+            </section>
+
+
+            <section id="15">
+
+                <h2>Частые ошибки</h2>
+
+                <p>
+                    При изучении JavaScript начинающие разработчики часто
+                    сталкиваются с ошибками в синтаксисе и логике программы.
+                </p>
+
+                <ol>
+
+                    <li>
+                        Пропущена закрывающая скобка или кавычка.
+                    </li>
+
+                    <li>
+                        Используется переменная, которая ещё не объявлена.
+                    </li>
+
+                    <li>
+                        Неправильно указан идентификатор HTML-элемента.
+                    </li>
+
+                    <li>
+                        Событие привязано к несуществующему элементу.
+                    </li>
+
+                    <li>
+                        В условии допущена логическая ошибка.
+                    </li>
+
+                    <li>
+                        Ошибка возникает из-за неправильного типа данных.
+                    </li>
+
+                </ol>
+
+                <p>
+                    Для поиска ошибок удобно использовать Console в DevTools.
+                    Браузер выводит туда сообщения об ошибках, предупреждения
+                    и результаты выполнения кода.
+                </p>
+
+            </section>
+
+
+            <section id="16">
+
+                <h2>Итог</h2>
+
+                <p>
+                    JavaScript является языком программирования, который
+                    позволяет сделать веб-страницы интерактивными.
+                    Он используется для обработки действий пользователя,
+                    изменения содержимого страницы, выполнения вычислений
+                    и взаимодействия с сервером.
+                </p>
+
+                <p>
+                    Основу работы с JavaScript составляют переменные,
+                    типы данных, операторы, условия, циклы, функции,
+                    массивы и объекты.
+                </p>
+
+                <p>
+                    В сочетании с HTML и CSS JavaScript позволяет создавать
+                    полноценные интерактивные веб-приложения.
+                </p>
+
+            </section>
+
+        </article>
+
+
+        <div>
+            <aside class="sidebar">
+
+                <h2>Быстрая навигация</h2>
+
+                <ul class="uk-list uk-list-collapse">
+
+                    <li><a href="#1">Что такое JavaScript?</a></li>
+                    <li><a href="#2">Подключение JavaScript</a></li>
+                    <li><a href="#3">Переменные</a></li>
+                    <li><a href="#4">Типы данных</a></li>
+                    <li><a href="#5">Операторы</a></li>
+                    <li><a href="#6">Условия</a></li>
+                    <li><a href="#7">Циклы</a></li>
+                    <li><a href="#8">Функции</a></li>
+                    <li><a href="#9">Массивы</a></li>
+                    <li><a href="#10">Объекты</a></li>
+                    <li><a href="#11">DOM</a></li>
+                    <li><a href="#12">События</a></li>
+                    <li><a href="#13">Асинхронный JavaScript</a></li>
+                    <li><a href="#14">JavaScript и браузер</a></li>
+                    <li><a href="#15">Частые ошибки</a></li>
+                    <li><a href="#16">Итог</a></li>
+
+                </ul>
+
+
+                <h2>Основные конструкции</h2>
+
+                <ul>
+
+                    <li><code>let</code> — переменная</li>
+                    <li><code>const</code> — константа</li>
+                    <li><code>if</code> — условие</li>
+                    <li><code>for</code> — цикл</li>
+                    <li><code>function</code> — функция</li>
+                    <li><code>return</code> — возврат результата</li>
+
+                </ul>
+
+
+                <h2>Совет</h2>
+
+                <p>
+                    При отладке JavaScript используйте Console в DevTools.
+                    Она позволяет быстро увидеть ошибки и проверить значения
+                    переменных во время выполнения программы.
+                </p>
+
+            </aside>
+        </div>
+    </div>
+
+</main>
+
+
+<footer>
+
+    <p>
+    <p>OOO "Тмыв денег"</p>
+        Лучший сайт в мире разработал Чупров Сергей
+    </p>
+
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.24.0/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.24.0/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>

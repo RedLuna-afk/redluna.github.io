@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.24.0/dist/css/uikit.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="page">
+    <header class="uk-navbar-container" uk-navbar>
+        <a href="index.html">
+            <img class="logo" src="images/logo.png" alt="Логотип" width="200" height="200">
+        </a>
+
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@m">
+                <li><a href="browser.html">БРАУЗЕРЫ</a></li>
+                <li><a href="devtools.html">DEVTOOLS</a></li>
+                <li><a href="expansion.html">РАСШИРЕНИЯ</a></li>
+                <li><a href="HTML.html">HTML</a></li>
+                <li><a href="CSS.html">CSS</a></li>
+                <li><a href="JavaScript.html">JavaScript</a></li>
+                <li><a href="guide.html">Полезные знания / гайды</a></li>
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@m"
+               href="#mobile-menu"
+               uk-navbar-toggle-icon
+               uk-toggle></a>
+        </div>
+    </header>
+
+    <div id="mobile-menu" uk-offcanvas="overlay: true">
+        <div class="uk-offcanvas-bar">
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+            <ul class="uk-nav uk-nav-default">
+                <li><a href="browser.html">БРАУЗЕРЫ</a></li>
+                <li><a href="devtools.html">DEVTOOLS</a></li>
+                <li><a href="expansion.html">РАСШИРЕНИЯ</a></li>
+                <li><a href="HTML.html">HTML</a></li>
+                <li><a href="CSS.html">CSS</a></li>
+                <li><a href="JavaScript.html">JavaScript</a></li>
+                <li><a href="guide.html">ПОЛЕЗНЫЕ ЗНАНИЯ</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="uk-grid-small uk-grid-match" uk-grid>
+    <article class="uk-width-expand@m">
+        <h1>DevTools</h1>
+
+        <section>
+            <h2>Что такое DevTools?</h2>
+            <p>DevTools (Developer Tools) — это встроенный набор инструментов браузера, предназначенный для разработки, анализа и отладки веб-страниц и веб-приложений. С его помощью можно посмотреть HTML-структуру страницы, изменить CSS-стили, выполнить JavaScript-код, проанализировать сетевые запросы и проверить работу сайта на разных устройствах.
+
+                Инструменты разработчика доступны в современных браузерах, включая Google Chrome, Mozilla Firefox, Microsoft Edge и Safari. Несмотря на различия в интерфейсе, основные возможности DevTools в них похожи.</p>
+        </section>
+
+        <section>
+            <h2>Основные вкладки DevTools</h2>
+            <table class="uk-table uk-table-divider">
+                <caption></caption>
+                <thead>
+                    <tr>
+                        <th><b>Вкладка</b></th>
+                        <th><b>Назначение</b></th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Elements</td>
+                        <td>Просмотр и редактирование HTML и CSS</td>
+                    </tr>
+                    <tr>
+                        <td>Console</td>
+                        <td>Выполнение JavaScript и просмотр ошибок</td>
+                    </tr>
+                    <tr>
+                        <td>Sources</td>
+                        <td>Просмотр исходных файлов и отладка кода</td>
+                    </tr>
+                    <tr>
+                        <td>Network</td>
+                        <td>Анализ сетевых запросов и загрузки ресурсов</td>
+                    </tr>
+                    <tr>
+                        <td>Performance</td>
+                        <td>Анализ производительности страницы</td>
+                    </tr>
+                    <tr>
+                        <td>Application</td>
+                        <td>Работа с cookies, Local Storage и другими данными</td>
+                    </tr>
+                    <tr>
+                        <td>Security</td>
+                        <td>Проверка безопасности соединения и сертификата</td>
+                    </tr>
+                    <tr>
+                        <td>Lighthouse</td>
+                        <td>Анализ производительности, доступности и других характеристик сайта</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+        <section id="elements">
+            <h2>Elements — структура веб-страницы</h2>
+            <p>Вкладка Elements предназначена для просмотра DOM-структуры страницы. Она позволяет увидеть HTML-элементы, их атрибуты и вложенность.</p>
+            <p>В правой части интерфейса отображаются CSS-правила, применяемые к выбранному элементу. Разработчик может временно изменять свойства, например цвет, размер, отступы или положение элемента, и сразу видеть результат.</p>
+            <p>Такие изменения используются для экспериментов и поиска подходящего оформления. После обновления страницы временные изменения обычно исчезают.</p>
+        </section>
+        <section id="console">
+            <h2>Console — работа с JavaScript</h2>
+            <p>Console используется для выполнения JavaScript-кода непосредственно в браузере. Кроме того, здесь отображаются сообщения, предупреждения и ошибки, возникающие во время работы веб-страницы.</p>
+            <p>Например, разработчик может вывести значение переменной или проверить выполнение определённого участка программы</p>
+            <pre><code><span class="code-keyword">console</span>.<span class="code-method">log</span>(<span class="code-string">"Hello, DevTools!"</span>);</code></pre>
+        </section >
+        <section id ="network">
+            <h2>Network — анализ загрузки страницы</h2>
+            <p>Вкладка Network позволяет отслеживать сетевые запросы, которые выполняет браузер. С её помощью можно определить, какие HTML-файлы, изображения, таблицы стилей, скрипты и другие ресурсы загружаются при открытии страницы.</p>
+            <p>Также можно посмотреть время загрузки ресурса, его размер, тип и ответ сервера.</p>
+        </section>
+
+        <section id ="application">
+            <h2>Проверка адаптивности</h2>
+            <p>DevTools позволяют проверить внешний вид сайта на экранах разных размеров без использования нескольких физических устройств. В специальном режиме можно выбрать размер экрана или задать собственные значения ширины и высоты.</p>
+            <p>Такой режим особенно полезен при разработке адаптивных сайтов. С его помощью можно проверить, корректно ли работают медиазапросы, не выходят ли элементы за пределы экрана и правильно ли изменяется расположение блоков.</p>
+        </section>
+
+        <section id="end">
+            <h2>Зачем разработчику DevTools?</h2>
+            <p>DevTools являются одним из основных инструментов веб-разработчика. Они позволяют не только находить ошибки, но и экспериментировать с внешним видом страницы, анализировать её производительность и проверять работу сайта в различных условиях.</p>
+            <p>Благодаря инструментам разработчика многие проблемы можно обнаружить непосредственно в браузере, не изменяя исходный код проекта до тех пор, пока не найдено подходящее решение.</p>
+        </section>
+    </article>
+    <div>
+    <aside class="sidebar">
+        <h2>Быстрая навигация</h2>
+
+        <ul class="uk-list uk-list-decimal">
+            <li><a href="#elements">Elements — структура веб-страницы</a></li>
+            <li><a href="#console">Console — работа с JavaScript</a></li>
+            <li><a href="#network">Network — анализ загрузки страницы</a></li>
+            <li><a href="#application">Проверка адаптивности</a></li>
+            <li><a href="#end">Зачем разработчику DevTools</a></li>
+        </ul>
+
+        <h2>Горячие клавиши</h2>
+
+        <ul>
+            <li>F12 — открыть DevTools</li>
+            <li>Ctrl + Shift + C — выбор элемента</li>
+            <li>Ctrl + Shift + J — Console</li>
+        </ul>
+    </aside>
+    </div>
+    </div>
+
+
+</main>
+
+<footer >
+    <p>OOO "Тмыв денег"</p>
+    <p>Лучший сайт в мире разработал Чупров Сергей</p>
+
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.24.0/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.24.0/dist/js/uikit-icons.min.js"></script>
+</body>
+</html>

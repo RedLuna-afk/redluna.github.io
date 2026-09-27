@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript — Браузеры и DevTools</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.24.0/dist/css/uikit.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<main class="page">
+    <header class="uk-navbar-container" uk-navbar>
+
+        <a href="index.html">
+            <img class="logo"
+                 src="images/logo.png"
+                 alt="Логотип"
+                 width="200"
+                 height="200">
+        </a>
+
+        <div class="uk-navbar-right">
+
+            <ul class="uk-navbar-nav uk-visible@m">
+                <li><a href="browser.html">БРАУЗЕРЫ</a></li>
+                <li><a href="devtools.html">DEVTOOLS</a></li>
+                <li><a href="expansion.html">РАСШИРЕНИЯ</a></li>
+                <li><a href="HTML.html">HTML</a></li>
+                <li><a href="CSS.html">CSS</a></li>
+                <li><a href="JavaScript.html">JavaScript</a></li>
+                <li><a href="guide.html">Полезные знания / гайды</a></li>
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@m"
+               href="#mobile-menu"
+               uk-navbar-toggle-icon
+               uk-toggle>
+            </a>
+
+        </div>
+    </header>
+
+
+    <div id="mobile-menu" uk-offcanvas="overlay: true">
+
+        <div class="uk-offcanvas-bar">
+
+            <ul class="uk-nav uk-nav-default">
+
+                <li><a href="browser.html">БРАУЗЕРЫ</a></li>
+                <li><a href="devtools.html">DEVTOOLS</a></li>
+                <li><a href="expansion.html">РАСШИРЕНИЯ</a></li>
+                <li><a href="HTML.html">HTML</a></li>
+                <li><a href="CSS.html">CSS</a></li>
+                <li><a href="JavaScript.html">JavaScript</a></li>
+                <li><a href="guide.html">ПОЛЕЗНЫЕ ЗНАНИЯ</a></li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <section class="uk-container uk-container-large">
+
+        <div class="uk-text-center uk-margin-large-bottom">
+            <h1> ВИДЕО-ГАЙДЫ</h1>
+
+            <p class="uk-text-lead">
+                Практические материалы для изучения основ Web-разработки
+            </p>
+
+        </div>
+
+
+        <article class="guide-card uk-card uk-card-default uk-card-body uk-margin-large-bottom">
+
+            <div class="uk-grid-large uk-flex-middle"
+                 uk-grid>
+
+                <div class="uk-width-1-1 uk-width-1-3@m">
+
+                    <h2 class="uk-text-primary">
+                        HTML
+                    </h2>
+
+                    <p>
+                        Основы HTML: структура страницы, основные теги,
+                        заголовки, списки, ссылки, изображения и другие
+                        элементы веб-страницы.
+                    </p>
+
+
+                </div>
+
+                <div class="uk-width-1-1 uk-width-2-3@m">
+
+                    <div class="video-wrapper">
+                        <iframe src="https://vk.ru/video_ext.php?oid=-189497044&id=456239143&hash=982e96045161cb6c&hd=4" width="1920" height="1080" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0" allowfullscreen></iframe>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+        <article class="guide-card uk-card uk-card-default uk-card-body uk-margin-large-bottom">
+
+            <div class="uk-grid-large uk-flex-middle"
+                 uk-grid>
+
+                <div class="uk-width-1-1 uk-width-1-3@m">
+
+                    <h2 class="uk-text-primary">CSS</h2>
+
+                    <p>
+                        Изучение CSS: цвета, размеры, отступы, шрифты,
+                        позиционирование элементов, Flexbox и основы
+                        создания красивого интерфейса.
+                    </p>
+
+                </div>
+
+                <div class="uk-width-1-1 uk-width-2-3@m">
+
+                    <div class="video-wrapper">
+
+                        <iframe src="https://vk.ru/video_ext.php?oid=-189497044&id=456239161&hash=e7faffeb87387ce6&hd=4" width="1920" height="1080" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0" allowfullscreen></iframe>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+        <article class="guide-card uk-card uk-card-default uk-card-body">
+
+            <div class="uk-grid-large uk-flex-middle"
+                 uk-grid>
+
+                <div class="uk-width-1-1 uk-width-1-3@m">
+
+                    <h2 class="uk-text-primary">
+                        JavaScript
+                    </h2>
+
+                    <p>
+                        Основы JavaScript: переменные, функции, условия,
+                        циклы, события и взаимодействие JavaScript
+                        с элементами веб-страницы.
+                    </p>
+
+                </div>
+
+                <div class="uk-width-1-1 uk-width-2-3@m">
+
+                    <div class="video-wrapper">
+                        <iframe src="https://vk.ru/video_ext.php?oid=-189497044&id=456239128&hash=15296a89df4a205b&hd=4" width="1920" height="1080" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+
+
+
+
+</main>
+<footer class="uk-card-footer">
+    <p>
+        <p>OOO "Тмыв денег"</p>
+        Лучший сайт в мире разработал Чупров Сергей
+    </p>
+
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.24.0/dist/js/uikit.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.24.0/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS — Браузеры и DevTools</title>
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/uikit@3.24.0/dist/css/uikit.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<main class="page">
+
+    <header class="uk-navbar-container" uk-navbar>
+        <a href="index.html">
+            <img class="logo" src="images/logo.png" alt="Логотип" width="200" height="200">
+        </a>
+
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@m">
+                <li><a href="browser.html">БРАУЗЕРЫ</a></li>
+                <li><a href="devtools.html">DEVTOOLS</a></li>
+                <li><a href="expansion.html">РАСШИРЕНИЯ</a></li>
+                <li><a href="HTML.html">HTML</a></li>
+                <li><a href="CSS.html">CSS</a></li>
+                <li><a href="JavaScript.html">JavaScript</a></li>
+                <li><a href="guide.html">Полезные знания / гайды</a></li>
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@m"
+               href="#mobile-menu"
+               uk-navbar-toggle-icon
+               uk-toggle></a>
+        </div>
+    </header>
+
+    <div id="mobile-menu" uk-offcanvas="overlay: true">
+        <div class="uk-offcanvas-bar">
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+            <ul class="uk-nav uk-nav-default">
+                <li><a href="browser.html">БРАУЗЕРЫ</a></li>
+                <li><a href="devtools.html">DEVTOOLS</a></li>
+                <li><a href="expansion.html">РАСШИРЕНИЯ</a></li>
+                <li><a href="HTML.html">HTML</a></li>
+                <li><a href="CSS.html">CSS</a></li>
+                <li><a href="JavaScript.html">JavaScript</a></li>
+                <li><a href="guide.html">ПОЛЕЗНЫЕ ЗНАНИЯ</a></li>
+            </ul>
+        </div>
+    </div>
+
+    </div>
+
+
+    <div class="uk-grid-small uk-grid-match" uk-grid>
+
+        <article class="uk-width-expand">
+
+
+            <h1>CSS</h1>
+
+            <section id="1">
+
+                <h2>Что такое CSS?</h2>
+
+                <p>
+                    CSS (Cascading Style Sheets) — каскадные таблицы стилей,
+                    которые используются для оформления веб-страниц.
+                    Если HTML определяет структуру документа, то CSS отвечает
+                    за его внешний вид.
+                </p>
+
+                <p>
+                    С помощью CSS можно изменять цвета, размеры, шрифты,
+                    отступы, положение элементов, фон, границы и многие
+                    другие характеристики страницы.
+                </p>
+
+                <p>
+                    CSS позволяет отделить структуру документа от его
+                    оформления. Благодаря этому один и тот же HTML-документ
+                    можно оформить совершенно по-разному.
+                </p>
+
+                <h4>Простейший пример:</h4>
+
+                <pre><code><span class="code-keyword">p</span> {
+    <span class="code-method">color</span>: <span class="code-string">blue</span>;
+    <span class="code-method">font-size</span>: <span class="code-string">18px</span>;
+}</code></pre>
+
+            </section>
+
+
+            <section id="2">
+
+                <h2>Способы подключения CSS</h2>
+
+                <p>
+                    CSS можно подключить к HTML-документу несколькими способами.
+                    На практике чаще всего используется отдельный файл CSS,
+                    поскольку он позволяет хранить стили отдельно от HTML.
+                </p>
+
+                <table class="uk-table uk-table-divider">
+
+                    <thead>
+                    <tr>
+                        <th>Способ</th>
+                        <th>Описание</th>
+                        <th>Пример</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+
+                    <tr>
+                        <td>Внешний файл</td>
+                        <td>Стили находятся в отдельном файле</td>
+                        <td>style.css</td>
+                    </tr>
+
+                    <tr>
+                        <td>Внутренние стили</td>
+                        <td>CSS находится внутри элемента &lt;style&gt;</td>
+                        <td>&lt;style&gt; ... &lt;/style&gt;</td>
+                    </tr>
+
+                    <tr>
+                        <td>Inline</td>
+                        <td>Стиль записывается непосредственно в элементе</td>
+                        <td>style="color: red"</td>
+                    </tr>
+
+                    </tbody>
+
+                </table>
+
+                <h4>Подключение внешнего файла:</h4>
+
+                <pre><code><span class="code-keyword">&lt;link</span>
+    <span class="code-method">rel</span>=<span class="code-string">"stylesheet"</span>
+    <span class="code-method">href</span>=<span class="code-string">"style.css"</span>
+<span class="code-keyword">&gt;</span></code></pre>
+
+            </section>
+
+
+            <section id="3">
+
+                <h2>Селекторы CSS</h2>
+
+                <p>
+                    Селектор определяет, к каким HTML-элементам будут применены
+                    определённые стили. CSS предоставляет большое количество
+                    различных селекторов.
+                </p>
+
+                <table class="uk-table uk-table-divider">
+
+                    <thead>
+                    <tr>
+                        <th>Селектор</th>
+                        <th>Назначение</th>
+                        <th>Пример</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+
+                    <tr>
+                        <td>По тегу</td>
+                        <td>Выбирает элементы определённого типа</td>
+                        <td>p</td>
+                    </tr>
+
+                    <tr>
+                        <td>По классу</td>
+                        <td>Выбирает элементы с определённым классом</td>
+                        <td>.menu</td>
+                    </tr>
+
+                    <tr>
+                        <td>По идентификатору</td>
+                        <td>Выбирает элемент с определённым id</td>
+                        <td>#header</td>
+                    </tr>
+
+                    <tr>
+                        <td>Универсальный</td>
+                        <td>Выбирает все элементы</td>
+                        <td>*</td>
+                    </tr>
+
+                    </tbody>
+
+                </table>
+
+                <h4>Пример:</h4>
+
+                <pre><code><span class="code-keyword">.title</span> {
+    <span class="code-method">color</span>: <span class="code-string">purple</span>;
+    <span class="code-method">font-size</span>: <span class="code-string">32px</span>;
+}</code></pre>
+
+            </section>
+
+
+            <section id="4">
+
+                <h2>Цвета и фон</h2>
+
+                <p>
+                    CSS позволяет задавать цвет текста, фона и других элементов.
+                    Цвет можно задавать несколькими способами: названием,
+                    шестнадцатеричным кодом, RGB, RGBA и другими форматами.
+                </p>
+
+                <h4>Пример цвета текста:</h4>
+
+                <pre><code><span class="code-keyword">h1</span> {
+    <span class="code-method">color</span>: <span class="code-string">#704A8E</span>;
+}</code></pre>
+
+                <p>
+                    Для фона можно использовать не только обычный цвет,
+                    но и изображения, градиенты и другие эффекты.
+                </p>
+
+                <h4>Градиент:</h4>
+
+                <pre><code><span class="code-keyword">.page</span> {
+    <span class="code-method">background</span>:<span class="code-string">linear-gradient(90deg,#FBC2EB,#A6C1EE)</span>;
+}</code></pre>
+
+            </section>
+
+
+            <section id="5">
+
+                <h2>Размеры и отступы</h2>
+
+                <p>
+                    CSS позволяет управлять размерами элементов и расстояниями
+                    между ними. Для этого используются свойства width, height,
+                    margin и padding.
+                </p>
+
+                <table class="uk-table uk-table-divider">
+
+                    <thead>
+                    <tr>
+                        <th>Свойство</th>
+                        <th>Назначение</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+
+                    <tr>
+                        <td>width</td>
+                        <td>Ширина элемента</td>
+                    </tr>
+
+                    <tr>
+                        <td>height</td>
+                        <td>Высота элемента</td>
+                    </tr>
+
+                    <tr>
+                        <td>margin</td>
+                        <td>Внешний отступ</td>
+                    </tr>
+
+                    <tr>
+                        <td>padding</td>
+                        <td>Внутренний отступ</td>
+                    </tr>
+
+                    </tbody>
+
+                </table>
+
+                <pre><code><span class="code-keyword">.card</span> {
+    <span class="code-method">width</span>: <span class="code-string">300px</span>;
+    <span class="code-method">padding</span>: <span class="code-string">20px</span>;
+    <span class="code-method">margin</span>: <span class="code-string">30px</span>;
+}</code></pre>
+
+            </section>
+
+
+            <section id="6">
+
+                <h2>Шрифты и текст</h2>
+
+                <p>
+                    С помощью CSS можно изменять внешний вид текста:
+                    выбирать шрифт, размер, начертание, межстрочное расстояние,
+                    выравнивание и цвет.
+                </p>
+
+                <pre><code><span class="code-keyword">p</span> {
+    <span class="code-method">font-family</span>:<span class="code-string">Arial, sans-serif</span>;
+    <span class="code-method">font-size</span>: <span class="code-string">18px</span>;
+    <span class="code-method">line-height</span>: <span class="code-string">1.6</span>;
+    <span class="code-method">text-align</span>: <span class="code-string">justify</span>;
+}</code></pre>
+
+                <p>
+                    Правильный выбор шрифта и размера текста важен для
+                    удобства чтения страницы. Также необходимо учитывать
+                    контраст между текстом и фоном.
+                </p>
+
+            </section>
+
+
+            <section id="7">
+
+                <h2>Границы и скругления</h2>
+
+                <p>
+                    CSS позволяет создавать границы вокруг элементов.
+                    Их цвет, толщину и стиль можно изменять с помощью
+                    свойства border.
+                </p>
+
+                <p>
+                    Для создания скруглённых углов используется свойство
+                    border-radius.
+                </p>
+
+                <pre><code><span class="code-keyword">.card</span> {
+    <span class="code-method">border</span>:<span class="code-string">2px solid #704A8E</span>;
+    <span class="code-method">border-radius</span>:<span class="code-string">15px</span>;
+}</code></pre>
+
+                <p>
+                    Такие свойства часто используются при создании карточек,
+                    кнопок, панелей и других элементов интерфейса.
+                </p>
+
+            </section>
+
+
+            <section id="8">
+
+                <h2>Flexbox</h2>
+
+                <p>
+                    Flexbox — это механизм CSS для удобного расположения
+                    элементов внутри контейнера. Он позволяет управлять
+                    направлением, выравниванием и расстояниями между элементами.
+                </p>
+
+                <p>
+                    Для включения Flexbox используется свойство
+                    <code>display: flex</code>.
+                </p>
+
+                <pre><code><span class="code-keyword">.menu</span> {
+    <span class="code-method">display</span>: <span class="code-string">flex</span>;
+    <span class="code-method">justify-content</span>:<span class="code-string">space-between</span>;
+    <span class="code-method">align-items</span>:<span class="code-string">center</span>;
+}</code></pre>
+
+                <p>
+                    Flexbox особенно удобен для создания навигационных меню,
+                    рядов карточек и различных элементов интерфейса.
+                </p>
+
+            </section>
+
+
+            <section id="9">
+
+                <h2>CSS Grid</h2>
+
+                <p>
+                    CSS Grid предназначен для создания двумерных сеток.
+                    В отличие от Flexbox, который в основном работает
+                    с одним направлением, Grid позволяет одновременно
+                    управлять строками и столбцами.
+                </p>
+
+                <pre><code><span class="code-keyword">.container</span> {
+    <span class="code-method">display</span>: <span class="code-string">grid</span>;
+    <span class="code-method">grid-template-columns</span>:<span class="code-string">repeat(3, 1fr)</span>;
+    <span class="code-method">gap</span>: <span class="code-string">20px</span>;
+}</code></pre>
+
+                <p>
+                    Grid удобно использовать для построения сложных макетов
+                    страниц, галерей и сеток карточек.
+                </p>
+
+            </section>
+
+
+            <section id="10">
+
+                <h2>Адаптивная вёрстка</h2>
+
+                <p>
+                    Адаптивная вёрстка позволяет странице корректно отображаться
+                    на различных устройствах: компьютерах, планшетах
+                    и смартфонах.
+                </p>
+
+                <p>
+                    Для изменения оформления в зависимости от ширины экрана
+                    используются медиазапросы.
+                </p>
+
+                <pre><code><span class="code-keyword">@media</span> (<span class="code-method">max-width</span>: <span class="code-string">768px</span>) {
+    <span class="code-keyword">.menu</span> {
+        <span class="code-method">flex-direction</span>:<span class="code-string">column</span>;
+    }
+}</code></pre>
+
+                <p>
+                    Например, горизонтальное меню на большом экране можно
+                    превратить в вертикальное меню на смартфоне.
+                </p>
+
+            </section>
+
+
+            <section id="11">
+
+                <h2>Позиционирование элементов</h2>
+
+                <p>
+                    CSS предоставляет несколько способов позиционирования
+                    элементов. Свойство position позволяет определить,
+                    каким образом элемент будет располагаться относительно
+                    документа или другого элемента.
+                </p>
+
+                <table class="uk-table uk-table-divider">
+
+                    <thead>
+                    <tr>
+                        <th>Значение</th>
+                        <th>Назначение</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+
+                    <tr>
+                        <td>static</td>
+                        <td>Обычное положение элемента</td>
+                    </tr>
+
+                    <tr>
+                        <td>relative</td>
+                        <td>Позиционирование относительно исходного места</td>
+                    </tr>
+
+                    <tr>
+                        <td>absolute</td>
+                        <td>Позиционирование относительно ближайшего контейнера</td>
+                    </tr>
+
+                    <tr>
+                        <td>fixed</td>
+                        <td>Фиксация относительно окна браузера</td>
+                    </tr>
+
+                    <tr>
+                        <td>sticky</td>
+                        <td>Элемент может фиксироваться при прокрутке</td>
+                    </tr>
+
+                    </tbody>
+
+                </table>
+
+            </section>
+
+
+            <section id="12">
+
+                <h2>Псевдоклассы</h2>
+
+                <p>
+                    Псевдоклассы позволяют применять стили к элементам
+                    в зависимости от их состояния.
+                </p>
+
+                <p>
+                    Например, псевдокласс <code>:hover</code> позволяет
+                    изменить оформление элемента, когда пользователь
+                    наводит на него курсор.
+                </p>
+
+                <pre><code><span class="code-keyword">button:hover</span> {
+    <span class="code-method">transform</span>:<span class="code-string">scale(1.05)</span>;
+    <span class="code-method">background</span>:<span class="code-string">#704A8E</span>;
+}</code></pre>
+
+                <p>
+                    Псевдоклассы часто используются для создания интерактивных
+                    кнопок, ссылок и элементов меню.
+                </p>
+
+            </section>
+
+
+            <!-- 13 -->
+            <section id="13">
+
+                <h2>CSS и UIkit</h2>
+
+                <p>
+                    CSS-фреймворки позволяют использовать готовые классы
+                    и компоненты для создания интерфейса. В данном проекте
+                    используется UIkit.
+                </p>
+
+                <p>
+                    Например, UIkit предоставляет готовые классы для создания
+                    навигации, сеток, кнопок, таблиц и других элементов.
+                </p>
+
+                <pre><code><span class="code-keyword">&lt;button</span><span class="code-method">class</span>=<span class="code-string">"uk-button uk-button-primary"</span><span class="code-keyword">&gt;</span>
+    Кнопка
+<span class="code-keyword">&lt;/button&gt;</span></code></pre>
+
+                <p>
+                    При этом собственный CSS можно использовать вместе
+                    с UIkit для изменения оформления компонентов под дизайн
+                    конкретного проекта.
+                </p>
+
+            </section>
+
+
+            <!-- 14 -->
+            <section id="14">
+
+                <h2>Частые ошибки в CSS</h2>
+
+                <p>
+                    При работе с CSS разработчики часто сталкиваются
+                    с проблемами, связанными с неправильными селекторами,
+                    наследованием и расположением элементов.
+                </p>
+
+                <ol>
+
+                    <li>
+                        Неправильно написан селектор.
+                    </li>
+
+                    <li>
+                        Класс в HTML не совпадает с классом в CSS.
+                    </li>
+
+                    <li>
+                        Свойство переопределяется другим правилом.
+                    </li>
+
+                    <li>
+                        Используется слишком высокая специфичность.
+                    </li>
+
+                    <li>
+                        Элемент выходит за пределы контейнера.
+                    </li>
+
+                    <li>
+                        Отсутствуют медиазапросы для мобильных устройств.
+                    </li>
+
+                </ol>
+
+            </section>
+
+
+            <!-- 15 -->
+            <section id="15">
+
+                <h2>Итог</h2>
+
+                <p>
+                    CSS является основной технологией для оформления
+                    HTML-документов. С его помощью можно управлять внешним
+                    видом практически каждого элемента веб-страницы.
+                </p>
+
+                <p>
+                    Знание селекторов, размеров, отступов, Flexbox, Grid,
+                    позиционирования и медиазапросов позволяет создавать
+                    современные и адаптивные интерфейсы.
+                </p>
+
+                <p>
+                    HTML отвечает за структуру, CSS — за внешний вид,
+                    а JavaScript — за поведение и интерактивность страницы.
+                    Совместное использование этих технологий является
+                    основой современной веб-разработки.
+                </p>
+
+            </section>
+
+        </article>
+
+        <diV>
+        <aside class="sidebar">
+
+            <h2>Быстрая навигация</h2>
+
+            <ul class="uk-list uk-list-collapse">
+
+                <li><a href="#1">Что такое CSS?</a></li>
+                <li><a href="#2">Подключение CSS</a></li>
+                <li><a href="#3">Селекторы</a></li>
+                <li><a href="#4">Цвета и фон</a></li>
+                <li><a href="#5">Размеры и отступы</a></li>
+                <li><a href="#6">Шрифты и текст</a></li>
+                <li><a href="#7">Границы</a></li>
+                <li><a href="#8">Flexbox</a></li>
+                <li><a href="#9">CSS Grid</a></li>
+                <li><a href="#10">Адаптивность</a></li>
+                <li><a href="#11">Позиционирование</a></li>
+                <li><a href="#12">Псевдоклассы</a></li>
+                <li><a href="#13">CSS и UIkit</a></li>
+                <li><a href="#14">Частые ошибки</a></li>
+                <li><a href="#15">Итог</a></li>
+
+            </ul>
+
+
+            <h2>Основные свойства</h2>
+
+            <ul>
+
+                <li><code>color</code> — цвет</li>
+                <li><code>background</code> — фон</li>
+                <li><code>margin</code> — внешний отступ</li>
+                <li><code>padding</code> — внутренний отступ</li>
+                <li><code>display</code> — тип отображения</li>
+                <li><code>position</code> — позиционирование</li>
+                <li><code>font-size</code> — размер текста</li>
+
+            </ul>
+
+
+            <h2>Совет</h2>
+
+            <p>
+                При разработке сначала создайте структуру страницы
+                с помощью HTML, а затем постепенно добавляйте оформление
+                и адаптивность с помощью CSS.
+            </p>
+
+        </aside>
+        </diV>
+    </div>
+
+</main>
+
+
+<footer>
+    <p>OOO "Тмыв денег"</p>
+    <p>Лучший сайт в мире разработал Чупров Сергей</p>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.24.0/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.24.0/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>
