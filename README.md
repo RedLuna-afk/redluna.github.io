@@ -7,7 +7,7 @@
 UIkit
 
 **Ссылка на работающий сайт на GitHub Pages:**  
-https://redluna.github.io/
+[https://redluna.github.io/](https://redluna-afk.github.io/redluna.github.io/)
 
 **Ссылка на репозиторий GitHub с исходным кодом:**  
 https://github.com/RedLuna-afk/redluna.github.io
